@@ -73,7 +73,7 @@ def send_megabundle(megabundle):
     ).signature.hex()
     print('relay signature', megabundle['relaySignature'])
     headers = {'Content-Type': 'application/json'}
-    payload = {'jsonrpc': '2.0', 'method': 'eth_sendBundle', 'params': [megabundle]}
+    payload = {'jsonrpc': '2.0', 'method': 'eth_sendMegabundle', 'params': [megabundle]}
     return send_request(MEGABUNGLE_RPC, payload, headers)
 
 
